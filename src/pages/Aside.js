@@ -29,7 +29,7 @@ import data from '../data';
 import Box from "@mui/system/Box";
 
 
-function Aside(){
+function Aside({apiData}){
   return(
     <>
       <div className="aside" style={{position:"absolute",left:"0"}}>
@@ -97,19 +97,19 @@ function Aside(){
       </Box>
       <Container sx={{marginTop:"20px"}}>
         <Grid container spacing={{md: 10, xs: 2  }}  justifyContent="center" columnSpacing={4} rowSpacing={4}>
-          {data.map((item) => (
+          {apiData.map((item) => (
             <Grid item  lg='3' xs='6'>
               <Card sx={{padding:"25px"}}> 
                 <CardMedia 
                   sx={{height:"200px"}}
-                  image={item.imgLink}
+                  image={item.image}
                 />
-                <Typography variant="body1">{item.title}</Typography>
-                <Typography variant="body1" sx={{fontWeight:"700"}}>{item.price}</Typography>
-                <Stack direction='row'>
-                    <Button startIcon={<EditIcon/>}>{item.btntext1}</Button>
-                    <Button color='error' startIcon={<DeleteIcon/>}>{item.btntext2}</Button>
-                </Stack>
+                <Typography variant="body1">{item.title}</Typography><br/>
+                <Typography variant="body2">{item.category}</Typography><br/>
+                <Typography variant="body2">{item.description}</Typography><br/>
+                <Typography variant="body1" sx={{fontWeight:"700"}}> Price: {item.price}</Typography>
+                <Typography variant="body1" sx={{fontWeight:"700"}}> Count:  {item.rating.count}</Typography>
+                <Typography variant="body1" sx={{fontWeight:"700"}}> Rating:  {item.rating.rate}</Typography>
               </Card>
             </Grid>
           ))}
