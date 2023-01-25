@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
 }
 body{
   background-color: #F7F7F7;
+  font-family: 'Poppins', sans-serif;
 }
 .logo-img{
   display: flex;

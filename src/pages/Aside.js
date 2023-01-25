@@ -95,21 +95,23 @@ function Aside({apiData}){
               </Stack>
             </div>
       </Box>
-      <Container sx={{marginTop:"20px"}}>
+      <Container sx={{marginTop:"20px",padding:"25px 0"}}>
         <Grid container spacing={{md: 10, xs: 2  }}  justifyContent="center" columnSpacing={4} rowSpacing={4}>
           {apiData.map((item) => (
             <Grid item  lg='3' xs='6'>
-              <Card sx={{padding:"25px"}}> 
+              <Card sx={{padding:"5px 25px",borderRadius:"10px",height:"400px"}}> 
                 <CardMedia 
                   sx={{height:"200px"}}
                   image={item.image}
                 />
-                <Typography variant="body1">{item.title}</Typography><br/>
-                <Typography variant="body2">{item.category}</Typography><br/>
-                <Typography variant="body2">{item.description}</Typography><br/>
-                <Typography variant="body1" sx={{fontWeight:"700"}}> Price: {item.price}</Typography>
-                <Typography variant="body1" sx={{fontWeight:"700"}}> Count:  {item.rating.count}</Typography>
-                <Typography variant="body1" sx={{fontWeight:"700"}}> Rating:  {item.rating.rate}</Typography>
+                <Typography padding='5px 0' variant="body1">{item.title.slice(0,20)}</Typography>
+                <Typography padding='5px 0' variant="overline">{item.category}</Typography>
+                <Typography padding='5px 0' variant="subtitle2">{item.description.slice(0,60)}</Typography>
+               <div style={{display:"flex",justifyContent:"space-between"}}>
+               <Typography variant="body1" sx={{fontWeight:"700"}}> Price: {item.price}</Typography>
+                <Typography variant="body1" sx={{fontWeight:"700"}}> {item.rating.rate}({item.rating.count})</Typography>
+               </div>
+
               </Card>
             </Grid>
           ))}
