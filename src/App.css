@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #F7F7F7;
+}
+.logo-img{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo-img img{
+  width: 45px;
+}
+.search input{
+  border: none;
+ }
+ .admin{
+  width: 35px;
+ }
+ .asideMenu{
+  width: 240px;
+  margin-top: 60px;
+ }
+ .box input{ 
+  border: 2px solid #ece8e8;
+  padding-left: 15px;
+  width: 300px;
+  height: 45px;
+ }
+.main{
+  position: absolute;
+  left: 240px;
+}
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 800px) {
+  .aside{
+    display: none;
+  }
+  .main{
+    left: 0;
+  }
+ }
