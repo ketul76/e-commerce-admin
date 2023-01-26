@@ -40,7 +40,7 @@ function Aside({apiData}){
             <List>
             <ListItem >
             <DashboardIcon  color="action" />
-              <Link to='/dashboard'>
+              <Link to='/dashboard/7676'>
                 <ListItemText className='navlist' sx={{ paddingLeft: "10px" }} >Dashboard</ListItemText></Link>
             </ListItem>
             <ListItem>
