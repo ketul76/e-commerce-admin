@@ -40,8 +40,9 @@ function Aside({apiData}){
             <List>
             <ListItem >
             <DashboardIcon  color="action" />
-              <Link to='/dashboard/7676'>
-                <ListItemText className='navlist' sx={{ paddingLeft: "10px" }} >Dashboard</ListItemText></Link>
+              {/* <Link to='/dashboard/7676'> */}
+                <ListItemText className='navlist' sx={{ paddingLeft: "10px" }} >Dashboard</ListItemText>
+                {/* </Link> */}
             </ListItem>
             <ListItem>
               <Inventory2Icon  color="action"/><ListItemText sx={{ paddingLeft: "10px" }}>Products</ListItemText><ExpandMoreIcon/>
@@ -101,6 +102,7 @@ function Aside({apiData}){
         <Grid container spacing={{md: 10, xs: 2  }}  justifyContent="center" columnSpacing={4} rowSpacing={4}>
           {apiData.map((item) => (
             <Grid item  lg='3' xs='6'>
+              <Link to='/product/:id'>
               <Card sx={{padding:"5px 25px",borderRadius:"10px",height:"400px"}}> 
                 <CardMedia 
                   sx={{height:"200px"}}
@@ -115,6 +117,7 @@ function Aside({apiData}){
                </div>
 
               </Card>
+              </Link>
             </Grid>
           ))}
         </Grid>
