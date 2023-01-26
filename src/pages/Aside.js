@@ -27,6 +27,7 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 import Button from "@mui/material/Button";
 import data from '../data';
 import Box from "@mui/system/Box";
+import { Link } from "react-router-dom";
 
 
 function Aside({apiData}){
@@ -38,8 +39,9 @@ function Aside({apiData}){
           <div className="asideMenu">
             <List>
             <ListItem >
-              <DashboardIcon  color="action" />
-              <ListItemText className='navlist' sx={{ paddingLeft: "10px" }}>Dashboard</ListItemText>
+            <DashboardIcon  color="action" />
+              <Link to='/dashboard'>
+                <ListItemText className='navlist' sx={{ paddingLeft: "10px" }} >Dashboard</ListItemText></Link>
             </ListItem>
             <ListItem>
               <Inventory2Icon  color="action"/><ListItemText sx={{ paddingLeft: "10px" }}>Products</ListItemText><ExpandMoreIcon/>
