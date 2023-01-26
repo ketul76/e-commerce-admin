@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
  
-function Dashboard({apiData}){
+function Dashboard(){
   let { id } = useParams();
+  console.log("The Id Is " , id);
   return(
     <>
 

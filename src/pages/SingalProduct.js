@@ -4,7 +4,7 @@ function SingalProduct(){
   let {id} = useParams();
   return(
     <>
-      
+      <h1>The Product Id is {id}</h1>
     </>
   )
 }

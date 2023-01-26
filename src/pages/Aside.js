@@ -31,6 +31,9 @@ import { Link } from "react-router-dom";
 
 
 function Aside({apiData}){
+  apiData.map((item) => (
+    console.log("THE APIDATA IS A " ,item.id)
+  ))
   return(
     <>
       <div className="aside" style={{position:"absolute",left:"0"}}>
@@ -102,8 +105,8 @@ function Aside({apiData}){
         <Grid container spacing={{md: 10, xs: 2  }}  justifyContent="center" columnSpacing={4} rowSpacing={4}>
           {apiData.map((item) => (
             <Grid item  lg='3' xs='6'>
-              <Link to='/product/:id'>
-              <Card sx={{padding:"5px 25px",borderRadius:"10px",height:"400px"}}> 
+              <Link style={{textDecoration:"none"}} to={`/product/${item.id}`}  >
+              <Card  sx={{padding:"5px 25px",borderRadius:"10px",height:"400px"}}> 
                 <CardMedia 
                   sx={{height:"200px"}}
                   image={item.image}
