@@ -6,7 +6,11 @@ import { useEffect } from "react";
 function SingalProduct(){
   let {id} = useParams();
   function productsData(){
-    axios.get('https://fakestoreapi.com/id')
+    axios.get('https://fakestoreapi.com/id',
+    {
+      id,
+    }
+    )
   .then(function (response) {
     console.log ("Responded Id is" ,  response);
   })

@@ -116,7 +116,6 @@ function Aside({apiData}){
                <Typography variant="body1" sx={{fontWeight:"700"}}> Price: {item.price}</Typography>
                 <Typography variant="body1" sx={{fontWeight:"700"}}> {item.rating.rate}({item.rating.count})</Typography>
                </div>
-
               </Card>
               </Link>
             </Grid> 
