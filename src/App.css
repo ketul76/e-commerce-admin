@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 body{
   background-color: #F7F7F7;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .logo-img{
   display: flex;
@@ -42,13 +42,15 @@ body{
 
 
 
-
-
  @media screen and (max-width: 800px) {
   .aside{
     display: none;
   }
   .main{
     left: 0;
+  }
+  .sigleCard{
+    justify-content: center;
+    flex-wrap: wrap;
   }
  }
